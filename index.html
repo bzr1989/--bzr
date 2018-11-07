@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://www.beijing-time.org/riqi.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>日期计算器_时间天数在线查询转换工具</title>
+<link rel="canonical" href="http://www.beijing-time.org/riqi.htm">
+<link rel="stylesheet" href="./time_files/riqi.css" type="text/css">
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="Cache-Control" content="no-cache">
+<link rel="preload" href="./time_files/f(1).txt" as="script"><script src="./time_files/f.txt"></script><script src="./time_files/ca-pub-0918218916976066.js.下载"></script><script type="text/javascript" src="./time_files/f(1).txt"></script><link rel="preload" href="http://pagead2.googlesyndication.com/pagead/js/r20181031/r20180604/show_ads_impl.js" as="script"></head>
+<body style=" background:#f6f8f9;">
+<div class="time_chargin  clearfix">
+<div class="time_vergin">
+<div class="time_divv time_p"><h1>日期计算器</h1></div>
+<div class="time_shi3">
+<br><br>
+<h2>计算几天后的日期：</h2>
+<br>
+<div class="zizizi">　和
+<input class="wenben" id="SY" style="width:100px" type="number" pattern="\d*" value="2018" onfocus="OnEnter(this)" onblur="OnExit(this)">年
+<input class="wenben" size="4" id="SM" style="width:100px" type="number" pattern="\d*" value="11" onfocus="OnEnter(this)" onblur="OnExit(this)">月
+<input class="wenben" size="4" id="SD" style="width:100px" type="number" pattern="\d*" value="7" onfocus="OnEnter(this)" onblur="OnExit(this)">
+日(默认今天)
+<br>
+相差
+<input class="wenben" size="8" style="width:80px" id="decday" type="number" pattern="\d*" value="100" onfocus="OnEnter(this)" onblur="OnExit(this)">天
+（输入负数向前计算）
+<br>是：
+<span style="color:#F60;" id="result1"></span>
+<br>
+<input class="anniu" type="button" value="计算日期" onclick="cala()">
+<br>
+<script>
+if (screen && screen.width > 375) {
+  document.write('<div class="guanggao2"><script type="text/javascript" src="http://www.beijing-time.org/sj/world.js"><\/script></div>');
+}
+</script><div class="guanggao2"><script type="text/javascript" src="./time_files/world.js.下载"></script><script async="" src="./time_files/f(2).txt"></script>
+
+</div>
+<h2>计算日期差：</h2>
+<br>
+<input class="wenben" size="8" style="width:100px" id="SY2" type="number" pattern="\d*" value="2018" onfocus="OnEnter(this)" onblur="OnExit(this)">年
+<input class="wenben" size="4" style="width:100px" id="SM2" type="number" pattern="\d*" value="11" onfocus="OnEnter(this)" onblur="OnExit(this)">月
+<input class="wenben" size="4" style="width:100px" id="SD2" type="number" pattern="\d*" value="7" onfocus="OnEnter(this)" onblur="OnExit(this)">日(默认今日)
+<br>
+和
+<br>
+<input class="wenben" size="8" id="SY3" style="width:100px" type="number" pattern="\d*" value="2019" onfocus="OnEnter(this)" onblur="OnExit(this)">年
+<input class="wenben" size="4" id="SM3" style="width:100px" type="number" pattern="\d*" value="1" onfocus="OnEnter(this)" onblur="OnExit(this)">月
+<input class="wenben" size="4" id="SD3" style="width:100px" type="number" pattern="\d*" value="1" onfocus="OnEnter(this)" onblur="OnExit(this)">日
+<br>相差：
+<span style="color:#F60;" id="result2"></span>天
+<br>
+<input class="anniu" type="button" value="计算日期" onclick="calb()">
+</div><br>
+<div class="guanggao"><script language="JavaScript" type="text/javascript" src="./time_files/world2.js.下载"></script><script async="" src="./time_files/f(2).txt"></script>
+</div>
+<script>
+var hzWeek= new Array("日","一","二","三","四","五","六","日");function cweekday(wday){return hzWeek[wday];}
+function cala()
+{
+y=document.getElementById("SY").value;
+m=document.getElementById("SM").value;
+d=document.getElementById("SD").value;
+ddd=document.getElementById("decday").value;
+
+ttt=new Date(y,m-1,d).getTime()+ddd*24000*3600;
+
+theday=new Date();
+theday.setTime(ttt);
+document.getElementById("result1").innerHTML=theday.getFullYear()+"年"+(1+theday.getMonth())+"月"+theday.getDate()+"日"+"星期"+cweekday(theday.getDay());
+}
+function calb()
+{
+y2=document.getElementById("SY2").value;
+m2=document.getElementById("SM2").value;
+d2=document.getElementById("SD2").value;
+y3=document.getElementById("SY3").value;
+m3=document.getElementById("SM3").value;
+d3=document.getElementById("SD3").value;
+day2=new Date(y2,m2-1,d2);
+day3=new Date(y3,m3-1,d3);
+document.getElementById("result2").innerHTML=(day3-day2)/86400000;
+}
+</script>
+</div>
+</div>
+<p class="footer_two">此日期计算器可以帮您算出从出生至今日一共存活了多少天数、距离节日、高考、考研、纪念日等日期还相差多少天数<br>有向前向后两种计算方式；并有计算几天后的时间和日期差数两种换算模式。</p>
+</html>
